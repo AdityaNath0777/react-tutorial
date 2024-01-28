@@ -48,4 +48,24 @@ After React:
 	-> Framework
 		e.g. NEXT.js, Gatsby, Remix, etc
 	
+
+for Normal React:
+	$ npx create-react-app ProjectName
+
+	$ npm run start
+	$ npm run build, etc
  
+ for Vite:
+	$ npm create vite@latest
+		-> Project Name
+		-> Framework
+		-> variant (TS or JS)
+
+	$ cd Project Name
+	$ npm i
+
+We need to separatly install the npm packages,
+but they're the ones we initially really need
+
+-> Running the vite + React:
+	$ npm run dev
