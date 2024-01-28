@@ -7,7 +7,7 @@ function App() {
   const username = "AdityaNath";
   return (
     <>
-      <h1>Jai Sita Raam</h1>
+      <h1>Jai {" "} Sita Raam</h1>
       <Youtube />
       <h3>Mera naam hai {username}</h3>
       <h3>This is Vite React App {" "} {/* Empty string here is for extra space */}  #{2+2}</h3> {/* It works absolutely fine */}
