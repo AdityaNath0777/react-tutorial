@@ -6,7 +6,7 @@ function useCurrencyInfo(currency){
 
     // trigger useEffect, whenever there is change in currency
     useEffect(()=>{
-        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
 
         // Now provide me the json version of response
         // i.e. the retrieved data (response, res) is now converted into json
