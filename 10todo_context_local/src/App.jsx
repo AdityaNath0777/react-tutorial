@@ -27,6 +27,8 @@ function App() {
   }
 
   const deleteTodo = (id) => {
+    // filter works with true logic, 
+    // thats why we are using reverse logic (!=)
     setTodos( (prev) => prev.filter((todo) => todo.id !== id ))
 
     // pass callback func in filter
@@ -45,22 +47,27 @@ function App() {
   }
 
   useEffect( ()=> {
-    // convert JSON String into objects
+    // convert JSON String into JSON objects
     const todos = JSON.parse(localStorage.getItem("todos"))
-      // now we need to [ush this data into States]
+      // now we need to [push this data into States]
       if(todos && todos.length > 0){
         setTodos(todos)
       }
   }, [])
 
   useEffect( ()=> {
+    // local storage needs string
     localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
   return (
     <TodoProvider
       value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}
     >
-    {/* Now everything inside this will be aware of the context */}
+    {/* 
+        * Importing data and functionalities from the TodoContext using values
+        * Now everything inside this will be aware of the context 
+        * Make sure to use this in the outermost layer
+    */}
       {/* 
       
       <TodoForm>
